@@ -1,0 +1,19 @@
+required_version: "~> 0.6"
+
+skip_files:
+  - path: .git
+  - path: .git/**/*
+
+hooks:
+  after:
+    - dir: "{{ outputFolder }}"
+      command: mv
+      args:
+        - .gitignore_BOILERPLATE
+        - .gitignore
+    - dir: "{{ outputFolder }}"
+      command: mv
+      args:
+        - .tool-versions_BOILERPLATE
+        - .tool-versions
+
