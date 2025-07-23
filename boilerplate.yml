@@ -9,11 +9,33 @@ hooks:
     - dir: "{{ outputFolder }}"
       command: mv
       args:
-        - .gitignore_BOILERPLATE
+        - .gitignore.BOILERPLATE
         - .gitignore
     - dir: "{{ outputFolder }}"
       command: mv
       args:
-        - .tool-versions_BOILERPLATE
-        - .tool-versions
-
+        - Taskfile.yml.BOILERPLATE
+        - Taskfile.yml
+    - dir: "{{ outputFolder }}"
+      command: mv
+      args:
+        - mise.toml.BOILERPLATE
+        - mise.toml
+    - dir: "{{ outputFolder }}"
+      command: rm
+      args:
+        - mise.lock
+    - dir: "{{ outputFolder }}"
+      command: touch
+      args:
+        - mise.lock
+    - dir: "{{ outputFolder }}"
+      command: mise
+      args:
+        - i
+    - dir: "{{ outputFolder }}"
+      command: task
+      args:
+        - init
+    - dir: "{{ outputFolder }}"
+      command: task
