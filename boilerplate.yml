@@ -29,13 +29,3 @@ hooks:
       command: touch
       args:
         - mise.lock
-    - dir: "{{ outputFolder }}"
-      command: mise
-      args:
-        - i
-    - dir: "{{ outputFolder }}"
-      command: task
-      args:
-        - init
-    - dir: "{{ outputFolder }}"
-      command: task
