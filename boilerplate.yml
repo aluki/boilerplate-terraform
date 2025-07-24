@@ -3,6 +3,8 @@ required_version: "~> 0.6"
 skip_files:
   - path: .git
   - path: .git/**/*
+  - path: .task
+  - path: .task/**/*
 
 hooks:
   after:
