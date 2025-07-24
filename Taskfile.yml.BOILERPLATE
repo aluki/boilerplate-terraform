@@ -17,3 +17,14 @@ tasks:
       - mise.lock
     cmds:
       - mise install
+
+  tf_init:
+    desc: Initialises the Terraform project
+    deps:
+      - init
+    sources:
+      - versions.tf
+    generates:
+      - .terraform.lock.hcl
+    cmds:
+      - tofu init
