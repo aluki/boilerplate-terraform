@@ -29,6 +29,27 @@ tasks:
     cmds:
       - tofu init
 
+  tf_plan:
+    desc: Plans the project
+    deps:
+      - tf_init
+    cmds:
+      - tofu plan
+
+  tf_apply:
+    desc: Applies the project
+    deps:
+      - tf_init
+    cmds:
+      - tofu apply -auto-approve
+
+  tf_destroy:
+    desc: Destroys the project
+    deps:
+      - tf_init
+    cmds:
+      - tofu destroy -auto-approve
+
   tf_validate:
     desc: Validates the Terraform project
     deps:
