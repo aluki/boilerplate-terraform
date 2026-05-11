@@ -4,3 +4,4 @@ lockfile = true
 [tools]
 task = "latest"
 opentofu = "latest"
+"pipx:commitizen" = "latest"

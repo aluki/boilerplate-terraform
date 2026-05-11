@@ -31,3 +31,8 @@ hooks:
       command: touch
       args:
         - mise.lock
+    - dir: "{{ outputFolder }}"
+      command: mv
+      args:
+        - .cz.toml.BOILERPLATE
+        - .cz.toml
