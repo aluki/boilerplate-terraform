@@ -2,6 +2,6 @@
 lockfile = true
 
 [tools]
-task = "latest"
-opentofu = "latest"
-"pipx:commitizen" = "latest"
+task = "3"
+opentofu = "1"
+"pipx:commitizen" = "4"
